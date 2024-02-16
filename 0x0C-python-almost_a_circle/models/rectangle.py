@@ -20,7 +20,6 @@ class Rectangle(Base):
 		self.height = height
 		self.x = x
 		self.y = y
-		
 
 		@property
 		def width(self):
@@ -56,6 +55,9 @@ class Rectangle(Base):
 		def y(self):
 			"""Gets the y coordinates."""
 			return self.__y
+		
+		def y(self, value):
+			self.__y = value
 		
 
 
