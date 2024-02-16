@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Defines a rectangle class that inherits from Base."""
+"""Defines a rectangle class."""
 from models.base import Base
 
 
 class Rectangle(Base):
 	"""Represents a rectangle."""
+
 	def __init__(self, width, height, x=0, y=0, id=None):
 		"""Initalize the rectangle.
 
@@ -55,9 +56,9 @@ class Rectangle(Base):
 		def y(self):
 			"""Gets the y coordinates."""
 			return self.__y
+		
 		@y.setter
 		def y(self, value):
+			"""sets the y coordinates"""
 			self.__y = value
-		
-
 
