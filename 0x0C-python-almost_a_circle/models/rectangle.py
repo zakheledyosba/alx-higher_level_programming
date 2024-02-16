@@ -15,6 +15,12 @@ class Rectangle(Base):
 			x (int): x coordinate from top-left corner of the rectangle.
 			y (int): y coordinate from top-left corner of the rectangle.
 			id : The id of the rectangele.Automatically assigned if None.
+
+		Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
 		"""	
 		super().__init__(id)
 		self.width = width
@@ -30,6 +36,10 @@ class Rectangle(Base):
 		@width.setter
 		def width(self, value):
 			"""sets the width."""
+			if type(value) != int:
+				raise TypeError("width must be an integer")
+			if value <= 0:
+				raise ValueError("width must be > 0")
 			self.__width = value
 		
 		@property
@@ -40,6 +50,10 @@ class Rectangle(Base):
 		@height.setter
 		def height(self, value):
 			"""sets the height."""
+			if type(value) != int:
+				raise TypeError("height must be an integer")
+			if value <= 0:
+				raise ValueError("height must be > 0")
 			self.__height = value
 		
 		@property
@@ -50,6 +64,10 @@ class Rectangle(Base):
 		@x.setter
 		def x(self, value):
 			"""sets the x coordinates."""
+			if type(value) != int:
+				raise TypeError("x must be an integer")
+			if value <= 0:
+				raise ValueError("x must be > 0")
 			self.__x = value
 		
 		@property
@@ -60,5 +78,14 @@ class Rectangle(Base):
 		@y.setter
 		def y(self, value):
 			"""sets the y coordinates"""
+			if type(value) != int:
+				raise TypeError("y must be an integer")
+			if value <= 0:
+				raise ValueError("y must be > 0")
 			self.__y = value
+
+		def area(self):
+			"""Return the area of the rectangle."""
+			return self.width * self.height
+
 
