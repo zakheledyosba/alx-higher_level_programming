@@ -3,15 +3,18 @@
 
 
 class Base:
-    """Represents a base class for other classes."""
+    """Represents a base class for other classes.
+    
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """Initializes a Base instanace with an id.
 
         Args:
-            id (int): The id of the instance.Automatically assigns a new id,
-            if None.
+            id (int): The id of the instance.Automatically assigns a new id,if None.
 
         Attributes:
             id (int): The id of the instance.

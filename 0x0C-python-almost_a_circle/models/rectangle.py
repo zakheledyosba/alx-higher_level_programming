@@ -15,11 +15,12 @@ class Rectangle(Base):
 			y (int): y coordinate from top-left corner of the rectangle.
 			id : The id of the rectangele.Automatically assigned if None.
 		"""	
+		super().__init__(id)
 		self.width = width
 		self.height = height
 		self.x = x
 		self.y = y
-		super().__init__(id)
+		
 
 		@property
 		def width(self):
