@@ -55,7 +55,7 @@ class Rectangle(Base):
 		def y(self):
 			"""Gets the y coordinates."""
 			return self.__y
-		
+		@y.setter
 		def y(self, value):
 			self.__y = value
 		
