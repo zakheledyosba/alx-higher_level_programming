@@ -4,10 +4,8 @@
 
 class Base:
     """Represents a base class for other classes."""
-
     __nb_objects = 0
-
-
+    
     def __init__(self, id=None):
         """Initializes a Base instanace with an id.
 
@@ -19,9 +17,8 @@ class Base:
         Attributes:
             id (int): The id of the instance.
         """
-
         if id is not None:
             self.id = id
         else:
-            base.__nb_objects =+ 1
-            self.id = base.__nb_objects =+ 1
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
