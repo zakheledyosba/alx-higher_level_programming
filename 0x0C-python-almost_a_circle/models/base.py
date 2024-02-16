@@ -9,7 +9,6 @@ class Base:
     def __init__(self, id=None):
         """Initializes a Base instanace with an id.
 
-
         Args:
             id (int): The id of the instance.Automatically assigns a new id,
             if None.
